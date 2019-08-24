@@ -7,24 +7,29 @@ http://www.daylightlinux.ch
 '''
 
 
+import json
+import http.client
 
-import requests
-
-ApiKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Please subscribe to receive your api key
+ApiKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Please subscribe to receive your api key
 
 def ListCountry():
 
-    url = "https://unogs-unogs-v1.p.rapidapi.com/aaapi.cgi"
-
-    querystring = {"t":"lc","q":"available"}
+    conn = http.client.HTTPSConnection("unogs-unogs-v1.p.rapidapi.com")
 
     headers = {
-        'x-rapidapi-host': "unogs-unogs-v1.p.rapidapi.com",  # Please subscribe to receive your api key
+        'x-rapidapi-host': "unogs-unogs-v1.p.rapidapi.com",
         'x-rapidapi-key': ApiKey
-        }
+    }
 
-    response = requests.request("GET", url, headers=headers, params=querystring,file=open("output.txt", "a"))
+    conn.request("GET", "/aaapi.cgi?t=lc&q=available", headers=headers)
 
-    print(response.text)
+    res = conn.getresponse()
+    data = res.read()
+
+    CountryListRaw=data.decode("utf-8")
+    #print(CountryListRaw)
+    CountryListRawJS=json.loads(CountryListRaw)
+    CountryCode=(CountryListRawJS["ITEMS"][0][1])  # OK Works
+    print(CountryCode)
 
 ListCountry()
