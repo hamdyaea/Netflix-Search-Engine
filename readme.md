@@ -13,13 +13,6 @@ The data is downloaded from : https://rapidapi.com/unogs/api/unogs/details
 If you use it from this Python 3 file you will need to subscribe (it's free) to this API.
 If you use the compiled version from Sourceforge you don't need to subscribe.
 
-## Download the Windows .exe version :
-
-You can run it with Python 3 and the right libraries or for Windows you can use the .exe software that I created there :
-
-[![Download Netflix last 7 days additions](https://img.shields.io/sourceforge/dm/mars-insight-weather-live.svg)](https://sourceforge.net/projects/mars-insight-weather-live/files/latest/download)
-[![Download Netflix last 7 days additions](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/mars-insight-weather-live/files/latest/download)
-
 ## What you need to make it work :  
 
 The last version of Python 3.
