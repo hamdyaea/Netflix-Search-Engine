@@ -13,7 +13,7 @@ import http.client
 
 netflixLogo = "./pictures/netflix.gif"
 
-ApiKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Please subscribe to receive your api key
+ApiKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Please subscribe to receive your api key
 
 def ListCountry():
     global CountryShortCode,CountrySelect
