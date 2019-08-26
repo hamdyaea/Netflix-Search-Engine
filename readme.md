@@ -1,6 +1,6 @@
 ![Awesome](awesome.svg) ![Python](python.png)  
 
-# Mars InSight Lastest Weather Report
+# Netflix last 7 days additions
 
 ![Screenshot](screenshot.png)
 
@@ -30,12 +30,6 @@ At least the version 0.98
 
 ```sh
 sudo python3 -m pip install --upgrade easygui 
-```
-You need wget for python 3:
-
-
-```sh
-sudo pip3 install wget
 ```
 
 ## How to launch this software :  
